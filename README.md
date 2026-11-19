@@ -1,5 +1,6 @@
 # Network Util
-A very small Java library for myself, that makes requesting sites slightly easier.
+A very small Java library for myself, that makes requesting sites very slightly easier.
+Saves me pasting this function into like 50% of my projects.
 
 ### Usage
 Thanks to [JitPak](https://jitpack.io/#scales-dev/Spreadsheet-Scripting)!
