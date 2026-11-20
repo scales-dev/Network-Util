@@ -1,14 +1,18 @@
 # Network Util
-A very small Java library for myself, that makes requesting sites very slightly easier.
+A very small Java library for myself, that makes GET requesting sites very slightly easier.
 Saves me pasting this function into like 50% of my projects.
+
+### Todo:
+If I start needing POST requests in the future, add that
 
 ### Usage
 Thanks to [JitPak](https://jitpack.io/#scales-dev/Spreadsheet-Scripting)!
-Replace TAG with a commit version or -SNAPSHOT to be on the bleeding edge
+Replace TAG with a commit version found [here](https://jitpack.io/#scales-dev/Network-Util) or -SNAPSHOT to be on the bleeding edge
 
 #### Gradle
 ```groovy
 dependencies {
+    // https://jitpack.io/#scales-dev/Network-Util
     implementation 'com.github.scales-dev:Network-Util:Tag'
     
     // https://github.com/google/gson
@@ -41,13 +45,12 @@ public static final Map<String, String> HEADERS = Map.of(
         "User-Agent", "Mozilla/5.0"
 );
 
-private static final Map<String, String> ITEM_DEFAULT_PARAMS = Map.of(
+private static final Map<String, String> PARAMS = Map.of(
         "stuffAfterQuestionMark", "idk"
 );
 
 
 public static JsonObject getData() {
-  return NetworkUtil.requestURL(API, Map.of(), HEADERS)
-          .getAsJsonObject("data");
+  return NetworkUtil.requestURL(API, PARAMS, HEADERS).getAsJsonObject();
 }
 ```

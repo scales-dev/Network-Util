@@ -12,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+// very small amount of code, but ill do anything to save a file or 2
 public class NetworkUtil {
   private static final HttpClient CLIENT = HttpClient.newHttpClient();
 
